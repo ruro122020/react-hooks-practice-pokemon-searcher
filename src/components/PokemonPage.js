@@ -12,7 +12,6 @@ function PokemonPage() {
     .then(res => res.json())
     .then(pokemons => setPokemons(pokemons))
   }, [])
-  console.log(pokemons)
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
@@ -21,7 +20,7 @@ function PokemonPage() {
       <br />
       <Search />
       <br />
-      <PokemonCollection />
+      <PokemonCollection pokemons={pokemons}/>
     </Container>
   );
 }
