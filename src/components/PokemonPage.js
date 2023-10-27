@@ -14,7 +14,7 @@ function PokemonPage() {
   }, [])
 
   const handleNewPokemon=(newPokemon)=>{
-    console.log(newPokemon)
+    setPokemons(prevState => [...prevState, newPokemon])
   }
   return (
     <Container>
