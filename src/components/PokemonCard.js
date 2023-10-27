@@ -28,7 +28,6 @@ function PokemonCard({ pokemon }) {
         :
         <img src={sprites.back} alt="oh no!" onClick={handleFlipCardClick}/>
       }
-
     </Card>
   );
 }
