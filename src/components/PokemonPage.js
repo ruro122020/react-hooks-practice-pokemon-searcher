@@ -13,11 +13,14 @@ function PokemonPage() {
     .then(pokemons => setPokemons(pokemons))
   }, [])
 
+  const handleNewPokemon=(newPokemon)=>{
+    console.log(newPokemon)
+  }
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm onAddPokemon={handleNewPokemon}/>
       <br />
       <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
       <br />
